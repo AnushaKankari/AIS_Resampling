@@ -49,7 +49,7 @@ c.	Light Gradient Boosting classifier
 
 The performance of the model is evaluated using various metrics. In our study, since we considered imbalance datasets we selected a set of suitable metrics for this problem.  Geometric mean, precision, recall, AUC, and f-score are considered as evaluation metrics. We also report the accuracy results only for reference. The geometric mean is the square root of the product of the sensitivity and specificity and measures the balance between classification performances on both the majority and minority classes. 
 
-###**5.2 Data Preprocessing and Resampling**
+### 5.2 Data Preprocessing and Resampling
 
 **Data preprocessing:**
 
