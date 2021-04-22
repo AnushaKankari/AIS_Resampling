@@ -1,7 +1,7 @@
 # **ARTIFICIAL IMMUNE SYSTEMS BASED RESAMPLING FOR DEALING WITH CLASS IMBALANCE**
 
 ## **1. Project Goal:**
-Many real-world datasets suffer from the class imbalance problem.Frequently, either oversampling or undersampling strategies are applied to balance the dataset. From the past few decades, Artificial Immune Systems (AIS) defined as the intelligent computational algorithms inspired by the biological immune systems and gained a lot of attention.Researchers aimed to develop various immune-based algorithms to address the complex real-world problems for a wide variety of application domains. Namely, there has been some research works where AIS are applied to solve specific problems that suffer from the class imbalance problem. However, these methods were applied as the learning algorithm to solve the tasks and were not used as a resampling method. Only one work exists that uses some techniques of AIS to address the class imbalance problem [8].
+Many real-world datasets suffer from the class imbalance problem.Frequently, either oversampling or undersampling strategies are applied to balance the dataset. From the past few decades, Artificial Immune Systems (AIS) which are defined as the intelligent computational algorithms inspired by the biological immune systems have gained a lot of attention from reserachers. They aimed to develop various immune-based algorithms to address the complex real-world problems for a wide variety of application domains. Namely, there has been some research works where AIS are applied to solve specific problems that suffer from the class imbalance problem. However, these methods were applied as the learning algorithm to solve the tasks and were not used as a resampling method. Only one work exists that uses some techniques of AIS to address the class imbalance problem [8].
 
 The goal of this project is to explore the use of AIS as a data resampling strategy to tackle the class imbalance problem. In this study, we will test, evaluate and compare different approaches for integrating AIS techniques as resampling methods to address the class imbalance problem. Our experiments will be carried out using a set of the public available imbalanced data sets from Health and Fraud detection fields.
 
@@ -31,9 +31,49 @@ The results of the above techniques applied to each dataset in a deeper manner i
 
 
 ## **5. Resampling and Modeling:**
-In the Exploratory Data Analysis (EDA) section, a large variety of datasets with an imbalance ratio (IR) ranging between 0.0017 to 0.76 are chosen and various EDA techniques are applied. The visual outcomes of all the EDA techniques helped us gain in-depth insights into each dataset within a short period of time. The imbalanced class distribution of these datasets would have a severe impact on predictive modeling outcomes. It is very important to handle the class imbalance before implementing any predictive data model. In Machine learning, one best approach is to handle the class imbalance by applying suitable resampling strategies before data modeling. In this section, a detailed explanation of various over-sampling and under-sampling algorithms Various data preprocessing techniques are applied to see the performance of the data models. The complete experimental setting we implemented, including, the learning algorithms, performance evaluation method and metrics used, as well as the data pre-processing techniques and the imbalanced learning techniques that we considered in this study for each dataset is available in "Data Sampling and Model" folder.
+In the Exploratory Data Analysis (EDA) section, a large variety of datasets with an imbalance ratio (IR) ranging between 0.0017 to 0.76 are chosen and various EDA techniques are applied. The visual outcomes of all the EDA techniques helped us gain in-depth insights into each dataset within a short period of time. The imbalanced class distribution of these datasets would have a severe impact on predictive modeling outcomes. It is very important to handle the class imbalance before implementing any predictive data model. In Machine learning, one best approach is to handle the class imbalance by applying suitable resampling strategies before data modeling. As part of this section, various over-sampling and under-sampling algorithms, data preprocessing techniques are applied to see the performance of the data models. All the techniques used are discussed in the list below. 
+### **5.1 Performance Evaluation**
+
+**K-fold Cross Validation (CV):** In general a dataset is split into 70% train and 30% test datasets using the train_test_split() function from the sklearn library. Subsequently, the model is trained using the training set and tested using the test dataset. The model performance is evaluated based on various metrics such as accuracy, recall, precision, etc. However, this method is not reliable because the results obtained in one test set can be very different from the results in other test sets. A solution to this problem is provided by the K-fold Cross Validation (CV) where the dataset is divided into folds and each fold at some point is used as a test set. In this study, the value of K is considered to be 5 meaning that each dataset is divided into 5 disjoint folds. In the first iteration, the first fold is used as a test set and the remaining as train sets. In the second iteration, the second fold is used as a test set and the remaining as train sets. This process is continued until each one of the 5 folds is used as a test set. The approach of this method ensures that the model is trained on different scenarios and allows us to obtain a better estimate of the models’ errors.
+
+**Data Modeling:** Algorithms from ensemble classifiers are considered in our study. In ensemble learning, the model combines individual classifier decisions and accordingly makes predictions. Bagging and Boosting are two popular ensemble methods. In bagging, a set of individual classifiers are trained in a parallel manner. Whereas in boosting, a set of individual models are trained in a successive manner. In this sequential manner, the algorithm tries to convert the weak learners from the previous model into strong learners and tends to reduce bias and variance. We selected tree-based ensemble models for our experiments.
+
+a.	Random Forest classifier
+b.	Ada Boosting classifier
+c.	Light Gradient Boosting classifier
+     
+**Evaluation metrics:**
+
+The performance of the model is evaluated using various metrics. In our study, since we considered imbalance datasets we selected a set of suitable metrics for this problem.  Geometric mean, precision, recall, AUC, and f-score are considered as evaluation metrics. We also report the accuracy results only for reference. The geometric mean is the square root of the product of the sensitivity and specificity and measures the balance between classification performances on both the majority and minority classes. 
+
+###**5.2 Data Preprocessing and Resampling**
+
+**Data preprocessing:**
+
+a.	Missing values
+
+b.	Standardization
+
+c.	One-Hot encoding
+
+**Oversampling strategies: **
+
+These strategies increase the minority class instances in the original dataset.
+
+a.SMOTE
+
+b.ADASYN
+
+**Under sampling strategies: **
+
+These strategies eliminate the majority class instances and creates a subset of the original dataset.
+
+a. NearMiss
+
+b. Random Under Sampling
 
 
+The complete experimental setting we implemented, including, the learning algorithms, performance evaluation method and metrics used, as well as the data pre-processing techniques and the imbalanced learning techniques that we considered in this study for each dataset is available in "Data Sampling and Model" folder.
 
 
 ## **6. AIS Resampling and Modeling:**
