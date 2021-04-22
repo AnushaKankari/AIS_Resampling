@@ -39,7 +39,9 @@ In the Exploratory Data Analysis (EDA) section, a large variety of datasets with
 **Data Modeling:** Algorithms from ensemble classifiers are considered in our study. In ensemble learning, the model combines individual classifier decisions and accordingly makes predictions. Bagging and Boosting are two popular ensemble methods. In bagging, a set of individual classifiers are trained in a parallel manner. Whereas in boosting, a set of individual models are trained in a successive manner. In this sequential manner, the algorithm tries to convert the weak learners from the previous model into strong learners and tends to reduce bias and variance. We selected tree-based ensemble models for our experiments.
 
 a.	Random Forest classifier
+
 b.	Ada Boosting classifier
+
 c.	Light Gradient Boosting classifier
      
 **Evaluation metrics:**
@@ -56,7 +58,7 @@ b.	Standardization
 
 c.	One-Hot encoding
 
-**Oversampling strategies: **
+**Oversampling strategies:**
 
 These strategies increase the minority class instances in the original dataset.
 
@@ -64,7 +66,7 @@ a.SMOTE
 
 b.ADASYN
 
-**Under sampling strategies: **
+**Under sampling strategies:**
 
 These strategies eliminate the majority class instances and creates a subset of the original dataset.
 
