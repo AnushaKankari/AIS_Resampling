@@ -16,6 +16,19 @@ In our study, we considered a set of imbalanced data sets related to the Health 
 ![image](https://user-images.githubusercontent.com/58121387/115747984-c0ffa000-a363-11eb-991b-53b837382f12.png)
 
 ## **4. Exploratory Data Analysis:**
+To implement any solution to a problem, the best initial approach is to analyze, explore, and understand the dataset. This approach is known to be the Exploratory Data Analysis (EDA). This considered to be a crucial step before data modeling in the Machine learning field. EDA supports various techniques that help to visually plot the summarized key characteristics of a dataset within less time. EDA plotting consists of histograms, box plots, scattering plots, and much more. In our study, we considered the below techniques or plotting of EDA to understand each dataset in a detailed manner.
+.
+1.	Checking the datatypes of features 
+2.	Missing values using bar charts
+3.	Distribution of the target field using bar charts
+4.	Density plots
+5.	Outlier Detection using box plots
+6.	Heatmap correlation matrix
+7.	2D and 3D scatter plots
+8.	Feature Importance
+
+The results of the above techniques applied to each dataset in a deeper manner is available in "Exploratory Data Analysis" folder.
+
 
 ## **4. Resampling and Modeling:**
 
@@ -34,12 +47,12 @@ In our study, we considered a set of imbalanced data sets related to the Health 
 
 **5.	Mutation:** This function alters one or more attributes/genes of each chromosome/tuple of a population and generates a mutated population set. Input parameters include the cloned population and mutation rate. On each gene/attribute of a tuple/chromosome, the mutation rate is applied. The mutated population is considered to be the next generation population set.
 
-Steps 2-5 are repeated until a defined stop condition is reached. After completing its execution, the AIS algorithm produces a new minority class population set. This way, we oversample the minority class, update the training set, and fit the model to calculate various performance evaluation metrics including accuracy, g-mean, f-score, precision, and recall to understand the impact of AIS on the imbalance datasets.  We also tried to apply popular oversampling and undersampling techniques after the use of our proposed AIS system to further enhance the models’ performance and address the class imbalance issue.
+Steps 2-5 are repeated until a defined stop condition is reached. After completing its execution, the AIS algorithm produces a new minority class population set. This way, we oversample the minority class, update the training set, and fit the model to calculate various performance evaluation metrics including accuracy, g-mean, f-score, precision, and recall to understand the impact of AIS on the imbalance datasets.  We also tried to apply popular oversampling and undersampling techniques after the use of our proposed AIS system to further enhance the models’ performance and address the class imbalance issue. All the code details and results obtained is available in "AIS_Sampling_and_Modeling" folder.
 
-  __### **6.2 Flow chart for AIS algorithm**
+  ### **6.2 Flow chart for AIS algorithm**
   ![image](https://user-images.githubusercontent.com/58121387/115758300-f6f55200-a36c-11eb-9afe-765b8adc3586.png)
 
-  __### **6.3 Pseudo code for AIS**
+  ### **6.3 Pseudo code for AIS**
   ![image](https://user-images.githubusercontent.com/58121387/115759899-c6161c80-a36e-11eb-8b48-bb787c1b9b2d.png)
 
 ## ** 7. Conclusion:**
