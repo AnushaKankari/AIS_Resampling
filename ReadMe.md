@@ -30,10 +30,14 @@ To implement any solution to a problem, the best initial approach is to analyze,
 The results of the above techniques applied to each dataset in a deeper manner is available in "Exploratory Data Analysis" folder.
 
 
-## **4. Resampling and Modeling:**
+## **5. Resampling and Modeling:**
+In the Exploratory Data Analysis (EDA) section, a large variety of datasets with an imbalance ratio (IR) ranging between 0.0017 to 0.76 are chosen and various EDA techniques are applied. The visual outcomes of all the EDA techniques helped us gain in-depth insights into each dataset within a short period of time. The imbalanced class distribution of these datasets would have a severe impact on predictive modeling outcomes. It is very important to handle the class imbalance before implementing any predictive data model. In Machine learning, one best approach is to handle the class imbalance by applying suitable resampling strategies before data modeling. In this section, a detailed explanation of various over-sampling and under-sampling algorithms Various data preprocessing techniques are applied to see the performance of the data models. The complete experimental setting we implemented, including, the learning algorithms, performance evaluation method and metrics used, as well as the data pre-processing techniques and the imbalanced learning techniques that we considered in this study for each dataset is available in "Data Sampling and Model" folder.
+
+
+
 
 ## **6. AIS Resampling and Modeling:**
-  ### ** 6.1 Implementation Details**
+  ### **6.1 Implementation Details**
   
   In this section, we present the different key functions introduced as part of the AIS algorithm and explain their goal.
   
